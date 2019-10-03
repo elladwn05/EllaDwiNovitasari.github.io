@@ -13,7 +13,7 @@
         <meta name="description" content="Repository Untuk Tugas">
       
       
-        <link rel="canonical" href="https://elladwn05.github.io/Tugas 2 - Mengukur Jarak/">
+        <link rel="canonical" href="https://elladwn05.github.io/Tugas 4 - Decision Tree/">
       
       
         <meta name="author" content="Ella Dwi Novitasari">
@@ -42,7 +42,7 @@
     
     
       
-        <title>MENGUKUR JARAK - (180411100126) Ella Dwi Novitasari</title>
+        <title>**DECISION TREE** - (180411100126) Ella Dwi Novitasari</title>
       
     
     
@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#mengukur-jarak" tabindex="1" class="md-skip">
+      <a href="#decision-tree" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -109,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                MENGUKUR JARAK
+                **DECISION TREE**
               
             </span>
           
@@ -242,70 +242,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        MENGUKUR JARAK
-      </label>
-    
-    <a href="./" title="MENGUKUR JARAK" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Tugas 2 - Mengukur Jarak/" title="MENGUKUR JARAK" class="md-nav__link">
       MENGUKUR JARAK
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#mengukur-jarak-menggunakan-eucliean-distance" class="md-nav__link">
-    Mengukur jarak menggunakan Eucliean Distance
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mengukur-jarak-menggunakan-manhattan-distance" class="md-nav__link">
-    Mengukur jarak menggunakan Manhattan Distance
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mengukur-jarak-menggunakan-minkowski-distance" class="md-nav__link">
-    Mengukur jarak menggunakan Minkowski Distance
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#langkah-mengukur-jarak" class="md-nav__link">
-    Langkah mengukur jarak :
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -325,11 +266,63 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Tugas 4 - Decision Tree/" title="**DECISION TREE**" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        **DECISION TREE**
+      </label>
+    
+    <a href="./" title="**DECISION TREE**" class="md-nav__link md-nav__link--active">
       **DECISION TREE**
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entropy" class="md-nav__link">
+    Entropy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gain" class="md-nav__link">
+    Gain
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gini-index" class="md-nav__link">
+    Gini Index
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -354,29 +347,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mengukur-jarak-menggunakan-eucliean-distance" class="md-nav__link">
-    Mengukur jarak menggunakan Eucliean Distance
+  <a href="#entropy" class="md-nav__link">
+    Entropy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mengukur-jarak-menggunakan-manhattan-distance" class="md-nav__link">
-    Mengukur jarak menggunakan Manhattan Distance
+  <a href="#gain" class="md-nav__link">
+    Gain
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mengukur-jarak-menggunakan-minkowski-distance" class="md-nav__link">
-    Mengukur jarak menggunakan Minkowski Distance
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#langkah-mengukur-jarak" class="md-nav__link">
-    Langkah mengukur jarak :
+  <a href="#gini-index" class="md-nav__link">
+    Gini Index
   </a>
   
 </li>
@@ -397,24 +383,208 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/elladwn05/edit/master/docs/Tugas 2 - Mengukur Jarak.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/elladwn05/edit/master/docs/Tugas 4 - Decision Tree.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="mengukur-jarak">MENGUKUR JARAK</h1>
-<p>Pengukuran jarak memegang peran yang sangat penting dalam menentukan kemiripan atau keteraturan di antara data dan item. Hal ini dilakukan untuk mengetahui, dengan cara seperti apa data dikatakan saling terkait, mirip, tidak mirip, dan metode pengukuran jarak seperti apa yang diperlukan untuk membandingkannya. Pada proses clustering, tahapan menentukan atau mendeskripsikan nilai kuantitatif dari tingkat kemiripan atau ketidakmiripan data (proximity measure) memiliki peranan sangat penting, sehingga perlu dilakukannya perbandingan beberapa metode yang sering digunakan, yaitu jarak euclidean, manhattan, dan minkowski.</p>
-<h3 id="mengukur-jarak-menggunakan-eucliean-distance">Mengukur jarak menggunakan Eucliean Distance</h3>
-<p>Euclidean distance merupakan salah satu metode perhitungan jarak yang digunakan untuk mengukur jarak dari 2(dua) buah titik dalam Euclidean space (meliputi bidang euclidean dua dimensi, tiga dimensi, atau bahkan lebih). Jarak yang paling terkenal yang digunakan untuk data numerik adalah jarak Euclidean. Ini adalah kasus khusus dari jarak Minkowski ketika m = 2. Jarak Euclidean berkinerja baik ketika digunakan untuk kumpulan data cluster kompak atau terisolasi . Meskipun jarak Euclidean sangat umum dalam pengelompokan, ia memiliki kelemahan: jika dua vektor data tidak memiliki nilai atribut yang sama, kemungkin memiliki jarak yang lebih kecil daripada pasangan vektor data lainnya yang mengandung nilai atribut yang sama. Masalah lain dengan jarak Euclidean sebagai fitur skala terbesar akan mendominasi yang lain. Normalisasi fitur kontinu adalah solusi untuk mengatasi kelemahan ini.</p>
-<h3 id="mengukur-jarak-menggunakan-manhattan-distance">Mengukur jarak menggunakan Manhattan Distance</h3>
-<p>Manhattan distance adalah kasus khsusu dari jarak Minkowski distance pada m = 1. Seperti Minkowski Distance, Manhattan distance sensitif terhadap outlier. BIla ukuran ini digunakan dalam algoritma clustering , bentuk cluster adalah hyper-rectangular. Manhattan distance digunakan untuk menghitung perbedaan absolut (mutlak) antara koordinat sepasang objek. Rumus yang digunakan adalah sebagai berikut:
+                <h1 id="decision-tree"><strong>DECISION TREE</strong></h1>
+<blockquote>
+<p>Decision tree adalah salah satu metode klasifikasi yang paling populer, karena mudah untuk diinterpretasi oleh manusia. Decision tree merupakan model prediksi menggunakan struktur pohon atau struktur berhirarki.</p>
+</blockquote>
+<p>Setiap orang tentu menginginkan sebuah pengambilan keputusan yang tepat dan efisien tak terkecuali sebuah perusahaan. Untuk itu banyak sekali perusahaan yang membutuhkan suatu media seperti <em>Business Intellegence</em> guna membantu dalam pengambilan keputusan yang tepat. Namun, hal tersebut tidak akan berarti tanpa adanya konsep <em>decision tree</em> atau yang biasa disebut pohon keputusan.</p>
+<p>Konsep dari pohon keputusan adalah mengubah data menjadi <em>decision tree</em> dan aturan-aturan keputusan. Manfaat utama dari penggunaan <em>decision tree</em> adalah kemampuannya untuk mem-<em>break down</em> proses pengambilan keputusan yang kompleks menjadi lebih simple, sehingga pengambil keputusan akan lebih menginterpretasikan solusi dari permasalahan.</p>
+<p>Nama lain dari <em>decision tree</em> adalah CART (<em>Classification and Regression Tree</em>). Dimana metode ini merupakan gabungan dari dua jenis pohon, yaitu <em>classification tree</em> dan juga <em>regression tree</em>. Untuk memudahkan, berikut ilustrasi dari keduanya.</p>
+<p><em>Decision tree</em> juga berguna untuk mengeksplorasi data, menemukan hubungan tersembunyi antara sejumlah calon variabel input dengan sebuah variabel target. <em>Decision tree</em> memadukan antara eksplorasi data dan pemodelan, sehingga sangat bagus sebagai langkah awal dalam proses pemodelan bahkan ketika dijadikan sebagai model akhir dari beberapa teknik lain.</p>
+<h2 id="entropy">Entropy</h2>
+<p>Entropi adalah nilai informasi yang menyatakan ukuran ketidakpastian(impurity) dari attribut dari suatu kumpulan obyek data dalam satuan bit.
 $$
-d _ { \operatorname { man } } = \sum _ { i = 1 } ^ { n } \left| x _ { i } - y _ { i } \right|
+E(T) = \sum_{i=1}^n {-P_i\log{P_i}}
 $$
-dimana <strong>m</strong> merupakan bilangan riel positif <strong>xi dan yi</strong>  merupakan dua vektor dalam ruang dimensi <strong>n</strong> implementasi ukuran jarak minkowski pada model clustering data atribut dilakukan normalisasi untuk mengukur dominasi dari atribut yang memiliki skala data besar,.</p>
-<h3 id="mengukur-jarak-menggunakan-minkowski-distance">Mengukur jarak menggunakan Minkowski Distance</h3>
-<p>Minkowski distance merupakan sebuah metrik dalam ruang vektor di mana suatu norma didefinisikan (normed vector space) sekaligus dianggap sebagai generalisasi dari Euclidean distance dan Manhattan distance. Dalam pengukuran jarak objek menggunakan minkowski distance biasanya digunakan nilai p adalah 1 atau 2. Berikut rumus yang digunakan menghitung jarak dalam metode ini.
+Dimana :</p>
+<p>T = ruang sampel data yang digunakan untukdata pelatihan</p>
+<p>Pi = Probabiliti muncul dalam row</p>
+<h2 id="gain">Gain</h2>
+<p>Information Gain adalah ukuran efektifitas suatu atribut dlm mengklasifikasikan data, digunakan untuk menentukan urutan atribut dimana attribut yang memiliki nilai Information Gain terbesar yang dipilih.
 $$
-d _ { \operatorname { min } } = ( \ sum _ { i = 1 } ^ { n } | x _ { i } - y _ { i } | ^ { m }  ) ^ { \frac { 1 } { m } } , m \geq 1
-$$</p>
+\operatorname{Gain}(T, X) = \operatorname{Entropy}(T) - \sum_{v\in{T}} \frac{T_{X,v}}{T} E(T_{X,v})</p>
+<p>$$
+Dimana :</p>
+<p>Entropy (T) = nilai entropi total dari atribut keputusan dalam ruang sampel data T</p>
+<p>x = fitur</p>
+<h2 id="gini-index">Gini Index</h2>
+<p>Dalam penerapan <em>GINI index</em> untuk data berskala <em>continuous</em>, terdapat beberapa metode yang dapat digunakan untuk menentukan titik pemecah terbaik, yakni metode <em>brute-force</em> dan metode <em>midpoints</em>.</p>
+<pre><code class="python"># Importing the required packages 
+import numpy as np 
+import pandas as pd 
+from sklearn.metrics import confusion_matrix 
+
+from sklearn.model_selection import train_test_split 
+from sklearn.tree import DecisionTreeClassifier 
+from sklearn.metrics import accuracy_score 
+from sklearn.metrics import classification_report 
+
+# Function importing Dataset 
+def importdata(): 
+    balance_data = pd.read_csv( 
+'https://archive.ics.uci.edu/ml/machine-learning-'+
+'databases/balance-scale/balance-scale.data', 
+    sep= ',', header = None) 
+
+    # Printing the dataswet shape 
+    print (&quot;Dataset Length: &quot;, len(balance_data)) 
+    print (&quot;Dataset Shape: &quot;, balance_data.shape) 
+
+    # Printing the dataset obseravtions 
+    print (&quot;Dataset: &quot;,balance_data.head()) 
+    return balance_data 
+
+# Function to split the dataset 
+def splitdataset(balance_data): 
+
+    # Seperating the target variable 
+    X = balance_data.values[:, 1:5] 
+    Y = balance_data.values[:, 0] 
+
+    # Spliting the dataset into train and test 
+    X_train, X_test, y_train, y_test = train_test_split(  
+    X, Y, test_size = 0.3, random_state = 100) 
+
+    return X, Y, X_train, X_test, y_train, y_test 
+
+# Function to perform training with giniIndex. 
+def train_using_gini(X_train, X_test, y_train): 
+
+    # Creating the classifier object 
+    clf_gini = DecisionTreeClassifier(criterion = &quot;gini&quot;, 
+            random_state = 100,max_depth=3, min_samples_leaf=5) 
+
+    # Performing training 
+    clf_gini.fit(X_train, y_train) 
+    return clf_gini 
+
+# Function to perform training with entropy. 
+def tarin_using_entropy(X_train, X_test, y_train): 
+
+    # Decision tree with entropy 
+    clf_entropy = DecisionTreeClassifier( 
+            criterion = &quot;entropy&quot;, random_state = 100, 
+            max_depth = 3, min_samples_leaf = 5) 
+
+    # Performing training 
+    clf_entropy.fit(X_train, y_train) 
+    return clf_entropy 
+
+
+# Function to make predictions 
+def prediction(X_test, clf_object): 
+
+    # Predicton on test with giniIndex 
+    y_pred = clf_object.predict(X_test) 
+    print(&quot;Predicted values:&quot;) 
+    print(y_pred) 
+    return y_pred 
+
+# Function to calculate accuracy 
+def cal_accuracy(y_test, y_pred): 
+
+    print(&quot;Confusion Matrix: &quot;, 
+        confusion_matrix(y_test, y_pred)) 
+
+    print (&quot;Accuracy : &quot;, 
+    accuracy_score(y_test,y_pred)*100) 
+
+    print(&quot;Report : &quot;, 
+    classification_report(y_test, y_pred)) 
+
+# Driver code 
+def main(): 
+
+    # Building Phase 
+    data = importdata() 
+    X, Y, X_train, X_test, y_train, y_test = splitdataset(data) 
+    clf_gini = train_using_gini(X_train, X_test, y_train) 
+    clf_entropy = tarin_using_entropy(X_train, X_test, y_train) 
+
+    # Operational Phase 
+    print(&quot;Results Using Gini Index:&quot;) 
+
+    # Prediction using gini 
+    y_pred_gini = prediction(X_test, clf_gini) 
+    cal_accuracy(y_test, y_pred_gini) 
+
+    print(&quot;Results Using Entropy:&quot;) 
+    # Prediction using entropy 
+    y_pred_entropy = prediction(X_test, clf_entropy) 
+    cal_accuracy(y_test, y_pred_entropy) 
+
+
+# Calling main function 
+if __name__==&quot;__main__&quot;: 
+    main() 
+</code></pre>
+
+<pre><code class="python">Dataset Length:  625
+Dataset Shape:  (625, 5)
+Dataset:     0  1  2  3  4
+0  B  1  1  1  1
+1  R  1  1  1  2
+2  R  1  1  1  3
+3  R  1  1  1  4
+4  R  1  1  1  5
+Results Using Gini Index:
+Predicted values:
+['R' 'L' 'R' 'R' 'R' 'L' 'R' 'L' 'L' 'L' 'R' 'L' 'L' 'L' 'R' 'L' 'R' 'L'
+ 'L' 'R' 'L' 'R' 'L' 'L' 'R' 'L' 'L' 'L' 'R' 'L' 'L' 'L' 'R' 'L' 'L' 'L'
+ 'L' 'R' 'L' 'L' 'R' 'L' 'R' 'L' 'R' 'R' 'L' 'L' 'R' 'L' 'R' 'R' 'L' 'R'
+ 'R' 'L' 'R' 'R' 'L' 'L' 'R' 'R' 'L' 'L' 'L' 'L' 'L' 'R' 'R' 'L' 'L' 'R'
+ 'R' 'L' 'R' 'L' 'R' 'R' 'R' 'L' 'R' 'L' 'L' 'L' 'L' 'R' 'R' 'L' 'R' 'L'
+ 'R' 'R' 'L' 'L' 'L' 'R' 'R' 'L' 'L' 'L' 'R' 'L' 'R' 'R' 'R' 'R' 'R' 'R'
+ 'R' 'L' 'R' 'L' 'R' 'R' 'L' 'R' 'R' 'R' 'R' 'R' 'L' 'R' 'L' 'L' 'L' 'L'
+ 'L' 'L' 'L' 'R' 'R' 'R' 'R' 'L' 'R' 'R' 'R' 'L' 'L' 'R' 'L' 'R' 'L' 'R'
+ 'L' 'L' 'R' 'L' 'L' 'R' 'L' 'R' 'L' 'R' 'R' 'R' 'L' 'R' 'R' 'R' 'R' 'R'
+ 'L' 'L' 'R' 'R' 'R' 'R' 'L' 'R' 'R' 'R' 'L' 'R' 'L' 'L' 'L' 'L' 'R' 'R'
+ 'L' 'R' 'R' 'L' 'L' 'R' 'R' 'R']
+Confusion Matrix:  [[ 0  6  7]
+ [ 0 67 18]
+ [ 0 19 71]]
+Accuracy :  73.40425531914893
+Report :                precision    recall  f1-score   support
+
+           B       0.00      0.00      0.00        13
+           L       0.73      0.79      0.76        85
+           R       0.74      0.79      0.76        90
+
+    accuracy                           0.73       188
+   macro avg       0.49      0.53      0.51       188
+weighted avg       0.68      0.73      0.71       188
+
+Results Using Entropy:
+Predicted values:
+['R' 'L' 'R' 'L' 'R' 'L' 'R' 'L' 'R' 'R' 'R' 'R' 'L' 'L' 'R' 'L' 'R' 'L'
+ 'L' 'R' 'L' 'R' 'L' 'L' 'R' 'L' 'R' 'L' 'R' 'L' 'R' 'L' 'R' 'L' 'L' 'L'
+ 'L' 'L' 'R' 'L' 'R' 'L' 'R' 'L' 'R' 'R' 'L' 'L' 'R' 'L' 'L' 'R' 'L' 'L'
+ 'R' 'L' 'R' 'R' 'L' 'R' 'R' 'R' 'L' 'L' 'R' 'L' 'L' 'R' 'L' 'L' 'L' 'R'
+ 'R' 'L' 'R' 'L' 'R' 'R' 'R' 'L' 'R' 'L' 'L' 'L' 'L' 'R' 'R' 'L' 'R' 'L'
+ 'R' 'R' 'L' 'L' 'L' 'R' 'R' 'L' 'L' 'L' 'R' 'L' 'L' 'R' 'R' 'R' 'R' 'R'
+ 'R' 'L' 'R' 'L' 'R' 'R' 'L' 'R' 'R' 'L' 'R' 'R' 'L' 'R' 'R' 'R' 'L' 'L'
+ 'L' 'L' 'L' 'R' 'R' 'R' 'R' 'L' 'R' 'R' 'R' 'L' 'L' 'R' 'L' 'R' 'L' 'R'
+ 'L' 'R' 'R' 'L' 'L' 'R' 'L' 'R' 'R' 'R' 'R' 'R' 'L' 'R' 'R' 'R' 'R' 'R'
+ 'R' 'L' 'R' 'L' 'R' 'R' 'L' 'R' 'L' 'R' 'L' 'R' 'L' 'L' 'L' 'L' 'L' 'R'
+ 'R' 'R' 'L' 'L' 'L' 'R' 'R' 'R']
+Confusion Matrix:  [[ 0  6  7]
+ [ 0 63 22]
+ [ 0 20 70]]
+Accuracy :  70.74468085106383
+Report :                precision    recall  f1-score   support
+
+           B       0.00      0.00      0.00        13
+           L       0.71      0.74      0.72        85
+           R       0.71      0.78      0.74        90
+
+    accuracy                           0.71       188
+   macro avg       0.47      0.51      0.49       188
+weighted avg       0.66      0.71      0.68       188
+</code></pre>
+
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
   tex2jax: {inlineMath: [['$$','$$']]}
@@ -424,58 +594,6 @@ MathJax.Hub.Config({
 <p><script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script></p>
-<h3 id="langkah-mengukur-jarak">Langkah mengukur jarak :</h3>
-<pre><code class="python">#Tugas 2_Penambangan Data.csv
-import pandas as pd
-from scipy import stats
-df = pd.read_csv('Tugas 2_Penambangan Data.csv',nrows=4,sep=';')
-df
-
-import scipy.spatial.distance as minko
-import itertools
-
-def minkowski (x,y,data):
-    return sum(x)+sum(y)
-dfvalues = df.values.tolist()
-data  = [
-    [x[0],x[1],minko.minkowski(dfvalues[x[0]], dfvalues[x[1]], 1)
-     ,minko.minkowski(dfvalues[x[0]], dfvalues[x[1]], 2)] 
-    for x in itertools.combinations(range(4),2)
-]
-columns = ['x','y', 'Minkowski (m-1)', 'Minkowski (m-2)']
-pd.DataFrame(data, columns=columns)
-
-numerical=[0,3]
-categorical=[1,2,6,7]
-binary=[4,5,8]
-ordinal=[1,2]
-
-def chordDist(v1,v2,jnis):
-    jmlh=0
-    normv1=0
-    normv2=0
-    for x in range (len(jnis)):
-        normv1=normv1+(int(df.values.tolist()[v1][jnis[x]])**2)
-        normv2=normv2+(int(df.values.tolist()[v1][jnis[x]])**2)
-        jmlh=jmlh+(int(df.values.tolist()[v1][jnis[x]])*int(df.values.tolist()[v2][jnis[x]]))
-    return ((2-(2*jmlh/(normv1*normv2)))**0.5)
-
-from IPython.display import HTML, display
-import tabulate
-table=[
-    [&quot;x&quot;]+['y']+[&quot;Jarak&quot;]+[&quot;Numeric&quot;]+[&quot;Ordinal&quot;]+[&quot;Categorical&quot;]+[&quot;Binary&quot;],
-    [0]+[2]+[0]+[&quot;{:.2f}&quot;.format(chordDist(0,2,numerical))]+[0]+[0]+[0],
-    [0]+[3]+[0]+[&quot;{:.2f}&quot;.format(chordDist(0,3,numerical))]+[0]+[0]+[0],
-    [1]+[2]+[0]+[&quot;{:.2f}&quot;.format(chordDist(1,2,numerical))]+[0]+[0]+[0],
-    [1]+[3]+[0]+[&quot;{:.2f}&quot;.format(chordDist(1,3,numerical))]+[0]+[0]+[0],
-    [2]+[3]+[0]+[&quot;{:.2f}&quot;.format(chordDist(2,3,numerical))]+[0]+[0]+[0],
-
-    ]
-
-display(HTML(tabulate.tabulate(table, tablefmt='html')))
-</code></pre>
-
-<p><img src="https://lh6.googleusercontent.com/tpPZoRfnp0m_LkxKwogcyIzM9Rih1qztXUE7GapR30RckrbEBWAo1l8Q0IZHIJubS5vdFiRdAAZs7AyYqqYx=w1366-h657" class="ndfHFb-c4YZDc-HiaYvf-RJLb9c" alt="Menampilkan 1.png" aria-hidden="true"></p>
                 
                   
                 
@@ -496,7 +614,7 @@ display(HTML(tabulate.tabulate(table, tablefmt='html')))
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Statistik Deskriptif/" title="Statistik Deskriptif" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Tugas 3 - Missing Value with KNN/" title="MISSING VALUE WITH KNN" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -505,25 +623,11 @@ display(HTML(tabulate.tabulate(table, tablefmt='html')))
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Statistik Deskriptif
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../Tugas 3 - Missing Value with KNN/" title="MISSING VALUE WITH KNN" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
                 MISSING VALUE WITH KNN
               </span>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
           </a>
+        
         
       </nav>
     </div>
