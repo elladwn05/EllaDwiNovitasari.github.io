@@ -313,8 +313,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../Tugas 4 - Decision Tree/" title="**DECISION TREE**" class="md-nav__link">
-      **DECISION TREE**
+    <a href="../Tugas 4 - Decision Tree/" title="DECISION TREE" class="md-nav__link">
+      DECISION TREE
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Tugas 5 - Clustering/" title="CLUSTERING" class="md-nav__link">
+      CLUSTERING
     </a>
   </li>
 
@@ -376,9 +388,9 @@
 <blockquote>
 <p><em>Missing Data adalah suatu informasi yang tidak tersedia dalam suatu data. Missing data mempengaruhi hasil penelitian karena keberadaan missing data dapat mengurangi tingkat akurasi dari hasil penelitian. Missing data dapat diatasi dengan imputasi. Imputasi merupakan suatu metode yang mengatasi missing data dengan mengisi nilai yang hilang dengan suatu nilai berdasarkan informasi lain yang didapat dari data tersebut.</em></p>
 </blockquote>
-<p>Salah satu metode imputasi adalah metode K Nearest Neighbor(KNN). Penelitian ini dilakukan untuk memprediksi nilai yang hilang dengan metode KNN. KNN bekerja dengan menghitung weight mean estimation berdasarkan jumlah K. K adalah jumlah observasi terdekat yang akan digunakan. Dalam penelitian ini, K yang digunakan yaitu K = 1, K = 5, K = 10, K = 15, dan K=20. Mean Square Error (MSE) dan Mean Absolute Percentage Error (MAPE) digunakan untuk mengetahui ketepatan hasil imputasi. Berdasarkan nilai rata-rata MSE dan MAPE dari 10 replikasi, KNN terbaik pada missing data 10% dan 20% terjadi pada saat K = 10, sedangkan untuk missing data 30% terjadi saat K = 15.</p>
+<p>​   Salah satu metode imputasi adalah metode K Nearest Neighbor(KNN). Penelitian ini dilakukan untuk memprediksi nilai yang hilang dengan metode KNN. KNN bekerja dengan menghitung weight mean estimation berdasarkan jumlah K. K adalah jumlah observasi terdekat yang akan digunakan. Dalam penelitian ini, K yang digunakan yaitu K = 1, K = 5, K = 10, K = 15, dan K=20. Mean Square Error (MSE) dan Mean Absolute Percentage Error (MAPE) digunakan untuk mengetahui ketepatan hasil imputasi. Berdasarkan nilai rata-rata MSE dan MAPE dari 10 replikasi, KNN terbaik pada missing data 10% dan 20% terjadi pada saat K = 10, sedangkan untuk missing data 30% terjadi saat K = 15.</p>
 <h3 id="imputasi-dengan-metode-knn">Imputasi dengan Metode KNN</h3>
-<p>Salah satu metode yang sering digunakan untuk masalah imputasi missing data adalah KNN. Metode ini merupakan metode yang sederhana dan fleksibel karena dapat digunakan baik pada variabel dengan data  kontinu maupun data diskrit (Mawarsari, 2012). Algoritma KNN :</p>
+<p>​   Salah satu metode yang sering digunakan untuk masalah imputasi missing data adalah KNN. Metode ini merupakan metode yang sederhana dan fleksibel karena dapat digunakan baik pada variabel dengan data  kontinu maupun data diskrit (Mawarsari, 2012). Algoritma KNN :</p>
 <ul>
 <li>
 <p>Tentukan nilai k </p>
@@ -389,7 +401,7 @@
 <li>Imputasi data hilang dengan rata-rata k tetangga terdekat di Dc </li>
 </ul>
 <h3 id="kelemahan-dan-keuntungan-knn">Kelemahan dan Keuntungan KNN</h3>
-<p>Keuntungan KNN adalah karena metode ini dapat digunakan untuk data yang bersifat kualitatif maupun kuantitatif, tanpa perlu membuat model prediksi, algoritma sederhana, KNN dibutuhkan untuk pertimbangan struktur korelasi data  (Acuna, 2004). Sedangkan kelemahan KNN adalah adanya pemilihan fungsi jarak, dapat menggunakan Euclidean, Manhattan, Mahalanobis dan Pearson. Selain itu Algoritma KNN akan mencari data yang paling mirip pada seluruh data pada dataset. Hal ini mengakibatkan kompleksitas waktu yang dibutuhkan algoritma ini menjadi cukup tinggi. Kelemahan  yang  ketiga  adalah  Pemilihan nilai k yang tidak tepat dapat menurukan kinerja klasifikasi (Acuna, 2004).</p>
+<p>​   Keuntungan KNN adalah karena metode ini dapat digunakan untuk data yang bersifat kualitatif maupun kuantitatif, tanpa perlu membuat model prediksi, algoritma sederhana, KNN dibutuhkan untuk pertimbangan struktur korelasi data  (Acuna, 2004). Sedangkan kelemahan KNN adalah adanya pemilihan fungsi jarak, dapat menggunakan Euclidean, Manhattan, Mahalanobis dan Pearson. Selain itu Algoritma KNN akan mencari data yang paling mirip pada seluruh data pada dataset. Hal ini mengakibatkan kompleksitas waktu yang dibutuhkan algoritma ini menjadi cukup tinggi. Kelemahan  yang  ketiga  adalah  Pemilihan nilai k yang tidak tepat dapat menurukan kinerja klasifikasi (Acuna, 2004).</p>
 <pre><code class="python"># importing pandas as pd 
 import pandas as pd 
 
@@ -444,13 +456,13 @@ df.fillna(0)
           </a>
         
         
-          <a href="../Tugas 4 - Decision Tree/" title="**DECISION TREE**" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Tugas 4 - Decision Tree/" title="DECISION TREE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                **DECISION TREE**
+                DECISION TREE
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
