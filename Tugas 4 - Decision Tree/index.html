@@ -42,7 +42,7 @@
     
     
       
-        <title>DECISION TREE - (180411100126) Ella Dwi Novitasari</title>
+        <title>Decision Tree - (180411100126) Ella Dwi Novitasari</title>
       
     
     
@@ -109,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                DECISION TREE
+                Decision Tree
               
             </span>
           
@@ -244,8 +244,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Tugas 2 - Mengukur Jarak/" title="MENGUKUR JARAK" class="md-nav__link">
-      MENGUKUR JARAK
+    <a href="../Tugas 2 - Mengukur Jarak/" title="Mengukur Jarak" class="md-nav__link">
+      Mengukur Jarak
     </a>
   </li>
 
@@ -256,8 +256,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Tugas 3 - Missing Value with KNN/" title="MISSING VALUE WITH KNN" class="md-nav__link">
-      MISSING VALUE WITH KNN
+    <a href="../Tugas 3 - Missing Value with KNN/" title="Missing Value with KNN" class="md-nav__link">
+      Missing Value with KNN
     </a>
   </li>
 
@@ -277,11 +277,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        DECISION TREE
+        Decision Tree
       </label>
     
-    <a href="./" title="DECISION TREE" class="md-nav__link md-nav__link--active">
-      DECISION TREE
+    <a href="./" title="Decision Tree" class="md-nav__link md-nav__link--active">
+      Decision Tree
     </a>
     
       
@@ -332,8 +332,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../Tugas 5 - Clustering/" title="CLUSTERING" class="md-nav__link">
-      CLUSTERING
+    <a href="../Tugas 5 - Clustering/" title="Clustering" class="md-nav__link">
+      Clustering
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Tugas 6 - Fuzzy C-Means/" title="Fuzzy C-Means" class="md-nav__link">
+      Fuzzy C-Means
     </a>
   </li>
 
@@ -398,14 +410,14 @@
                   <a href="https://github.com/elladwn05/edit/master/docs/Tugas 4 - Decision Tree.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="decision-tree">DECISION TREE</h1>
+                <h1 id="decision-tree">Decision Tree</h1>
 <blockquote>
 <p>Decision tree adalah salah satu metode klasifikasi yang paling populer, karena mudah untuk diinterpretasi oleh manusia. Decision tree merupakan model prediksi menggunakan struktur pohon atau struktur berhirarki.</p>
 </blockquote>
 <p>​   Setiap orang tentu menginginkan sebuah pengambilan keputusan yang tepat dan efisien tak terkecuali sebuah perusahaan. Untuk itu banyak sekali perusahaan yang membutuhkan suatu media seperti <em>Business Intellegence</em> guna membantu dalam pengambilan keputusan yang tepat. Namun, hal tersebut tidak akan berarti tanpa adanya konsep <em>decision tree</em> atau yang biasa disebut pohon keputusan.</p>
 <p>​   Konsep dari pohon keputusan adalah mengubah data menjadi <em>decision tree</em> dan aturan-aturan keputusan. Manfaat utama dari penggunaan <em>decision tree</em> adalah kemampuannya untuk mem-<em>break down</em> proses pengambilan keputusan yang kompleks menjadi lebih simple, sehingga pengambil keputusan akan lebih menginterpretasikan solusi dari permasalahan. Nama lain dari <em>decision tree</em> adalah CART (<em>Classification and Regression Tree</em>). Dimana metode ini merupakan gabungan dari dua jenis pohon, yaitu <em>classification tree</em> dan juga <em>regression tree</em>. Untuk memudahkan, berikut ilustrasi dari keduanya.</p>
 <p>​   <em>Decision tree</em> juga berguna untuk mengeksplorasi data, menemukan hubungan tersembunyi antara sejumlah calon variabel input dengan sebuah variabel target. <em>Decision tree</em> memadukan antara eksplorasi data dan pemodelan, sehingga sangat bagus sebagai langkah awal dalam proses pemodelan bahkan ketika dijadikan sebagai model akhir dari beberapa teknik lain.</p>
-<h2 id="entropy">Entropy</h2>
+<h4 id="entropy">Entropy</h4>
 <p>​   Entropi adalah nilai informasi yang menyatakan ukuran ketidakpastian(impurity) dari attribut dari suatu kumpulan obyek data dalam satuan bit.
 $$
 E(T) = \sum_{i=1}^n {-P_i\log{P_i}}
@@ -413,7 +425,7 @@ $$
 Dimana :</p>
 <p>T = ruang sampel data yang digunakan untukdata pelatihan</p>
 <p>Pi = Probabiliti muncul dalam row</p>
-<h2 id="gain">Gain</h2>
+<h4 id="gain">Gain</h4>
 <p>​   Information Gain adalah ukuran efektifitas suatu atribut dlm mengklasifikasikan data, digunakan untuk menentukan urutan atribut dimana attribut yang memiliki nilai Information Gain terbesar yang dipilih.
 $$
 \operatorname{Gain}(T, X) = \operatorname{Entropy}(T) - \sum_{v\in{T}} \frac{T_{X,v}}{T} E(T_{X,v})
@@ -421,7 +433,7 @@ $$
 Dimana :</p>
 <p>Entropy (T) = nilai entropi total dari atribut keputusan dalam ruang sampel data T</p>
 <p>x = fitur</p>
-<h2 id="gini-index">Gini Index</h2>
+<h4 id="gini-index">Gini Index</h4>
 <p>​   Dalam penerapan <em>GINI index</em> untuk data berskala <em>continuous</em>, terdapat beberapa metode yang dapat digunakan untuk menentukan titik pemecah terbaik, yakni metode <em>brute-force</em> dan metode <em>midpoints</em>.</p>
 <pre><code class="python"># Importing the required packages 
 import numpy as np 
@@ -625,7 +637,7 @@ MathJax.Hub.Config({
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Tugas 3 - Missing Value with KNN/" title="MISSING VALUE WITH KNN" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Tugas 3 - Missing Value with KNN/" title="Missing Value with KNN" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -634,19 +646,19 @@ MathJax.Hub.Config({
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                MISSING VALUE WITH KNN
+                Missing Value with KNN
               </span>
             </div>
           </a>
         
         
-          <a href="../Tugas 5 - Clustering/" title="CLUSTERING" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Tugas 5 - Clustering/" title="Clustering" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                CLUSTERING
+                Clustering
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

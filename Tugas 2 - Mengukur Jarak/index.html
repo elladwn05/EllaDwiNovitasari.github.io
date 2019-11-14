@@ -42,7 +42,7 @@
     
     
       
-        <title>MENGUKUR JARAK - (180411100126) Ella Dwi Novitasari</title>
+        <title>Mengukur Jarak - (180411100126) Ella Dwi Novitasari</title>
       
     
     
@@ -109,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                MENGUKUR JARAK
+                Mengukur Jarak
               
             </span>
           
@@ -253,11 +253,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        MENGUKUR JARAK
+        Mengukur Jarak
       </label>
     
-    <a href="./" title="MENGUKUR JARAK" class="md-nav__link md-nav__link--active">
-      MENGUKUR JARAK
+    <a href="./" title="Mengukur Jarak" class="md-nav__link md-nav__link--active">
+      Mengukur Jarak
     </a>
     
       
@@ -315,8 +315,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Tugas 3 - Missing Value with KNN/" title="MISSING VALUE WITH KNN" class="md-nav__link">
-      MISSING VALUE WITH KNN
+    <a href="../Tugas 3 - Missing Value with KNN/" title="Missing Value with KNN" class="md-nav__link">
+      Missing Value with KNN
     </a>
   </li>
 
@@ -327,8 +327,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Tugas 4 - Decision Tree/" title="DECISION TREE" class="md-nav__link">
-      DECISION TREE
+    <a href="../Tugas 4 - Decision Tree/" title="Decision Tree" class="md-nav__link">
+      Decision Tree
     </a>
   </li>
 
@@ -339,8 +339,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../Tugas 5 - Clustering/" title="CLUSTERING" class="md-nav__link">
-      CLUSTERING
+    <a href="../Tugas 5 - Clustering/" title="Clustering" class="md-nav__link">
+      Clustering
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Tugas 6 - Fuzzy C-Means/" title="Fuzzy C-Means" class="md-nav__link">
+      Fuzzy C-Means
     </a>
   </li>
 
@@ -412,17 +424,17 @@
                   <a href="https://github.com/elladwn05/edit/master/docs/Tugas 2 - Mengukur Jarak.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="mengukur-jarak">MENGUKUR JARAK</h1>
+                <h1 id="mengukur-jarak">Mengukur Jarak</h1>
 <p>​   Pengukuran jarak memegang peran yang sangat penting dalam menentukan kemiripan atau keteraturan di antara data dan item. Hal ini dilakukan untuk mengetahui, dengan cara seperti apa data dikatakan saling terkait, mirip, tidak mirip, dan metode pengukuran jarak seperti apa yang diperlukan untuk membandingkannya. Pada proses clustering, tahapan menentukan atau mendeskripsikan nilai kuantitatif dari tingkat kemiripan atau ketidakmiripan data (proximity measure) memiliki peranan sangat penting, sehingga perlu dilakukannya perbandingan beberapa metode yang sering digunakan, yaitu jarak euclidean, manhattan, dan minkowski.</p>
-<h3 id="mengukur-jarak-menggunakan-eucliean-distance">Mengukur jarak menggunakan Eucliean Distance</h3>
+<h4 id="mengukur-jarak-menggunakan-eucliean-distance">Mengukur jarak menggunakan Eucliean Distance</h4>
 <p>​   Euclidean distance merupakan salah satu metode perhitungan jarak yang digunakan untuk mengukur jarak dari 2(dua) buah titik dalam Euclidean space (meliputi bidang euclidean dua dimensi, tiga dimensi, atau bahkan lebih). Jarak yang paling terkenal yang digunakan untuk data numerik adalah jarak Euclidean. Ini adalah kasus khusus dari jarak Minkowski ketika m = 2. Jarak Euclidean berkinerja baik ketika digunakan untuk kumpulan data cluster kompak atau terisolasi . Meskipun jarak Euclidean sangat umum dalam pengelompokan, ia memiliki kelemahan: jika dua vektor data tidak memiliki nilai atribut yang sama, kemungkin memiliki jarak yang lebih kecil daripada pasangan vektor data lainnya yang mengandung nilai atribut yang sama. Masalah lain dengan jarak Euclidean sebagai fitur skala terbesar akan mendominasi yang lain. Normalisasi fitur kontinu adalah solusi untuk mengatasi kelemahan ini.</p>
-<h3 id="mengukur-jarak-menggunakan-manhattan-distance">Mengukur jarak menggunakan Manhattan Distance</h3>
+<h4 id="mengukur-jarak-menggunakan-manhattan-distance">Mengukur jarak menggunakan Manhattan Distance</h4>
 <p>​   Manhattan distance adalah kasus khsusu dari jarak Minkowski distance pada m = 1. Seperti Minkowski Distance, Manhattan distance sensitif terhadap outlier. BIla ukuran ini digunakan dalam algoritma clustering , bentuk cluster adalah hyper-rectangular. Manhattan distance digunakan untuk menghitung perbedaan absolut (mutlak) antara koordinat sepasang objek. Rumus yang digunakan adalah sebagai berikut:
 $$
 d _ { \operatorname { man } } = \sum _ { i = 1 } ^ { n } \left| x _ { i } - y _ { i } \right|
 $$
 dimana <strong>m</strong> merupakan bilangan riel positif <strong>xi dan yi</strong>  merupakan dua vektor dalam ruang dimensi <strong>n</strong> implementasi ukuran jarak minkowski pada model clustering data atribut dilakukan normalisasi untuk mengukur dominasi dari atribut yang memiliki skala data besar,.</p>
-<h3 id="mengukur-jarak-menggunakan-minkowski-distance">Mengukur jarak menggunakan Minkowski Distance</h3>
+<h4 id="mengukur-jarak-menggunakan-minkowski-distance">Mengukur jarak menggunakan Minkowski Distance</h4>
 <p>​   Minkowski distance merupakan sebuah metrik dalam ruang vektor di mana suatu norma didefinisikan (normed vector space) sekaligus dianggap sebagai generalisasi dari Euclidean distance dan Manhattan distance. Dalam pengukuran jarak objek menggunakan minkowski distance biasanya digunakan nilai p adalah 1 atau 2. Berikut rumus yang digunakan menghitung jarak dalam metode ini.
 $$
 d _ { \operatorname { min } } = ( \ sum _ { i = 1 } ^ { n } | x _ { i } - y _ { i } | ^ { m }  ) ^ { \frac { 1 } { m } } , m \geq 1
@@ -436,7 +448,7 @@ MathJax.Hub.Config({
 <p><script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script></p>
-<h3 id="langkah-mengukur-jarak">Langkah mengukur jarak :</h3>
+<h2 id="langkah-mengukur-jarak">Langkah mengukur jarak :</h2>
 <pre><code class="python">#Tugas 2_Penambangan Data.csv
 import pandas as pd
 from scipy import stats
@@ -523,13 +535,13 @@ display(HTML(tabulate.tabulate(table, tablefmt='html')))
           </a>
         
         
-          <a href="../Tugas 3 - Missing Value with KNN/" title="MISSING VALUE WITH KNN" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Tugas 3 - Missing Value with KNN/" title="Missing Value with KNN" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                MISSING VALUE WITH KNN
+                Missing Value with KNN
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
