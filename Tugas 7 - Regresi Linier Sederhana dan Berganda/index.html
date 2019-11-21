@@ -566,13 +566,13 @@
 <blockquote>
 <p>Regresi linier sederhana adalah  regresi yang hanya melibatkan dua variabel, yaitu 1 (satu) variabel dependen atau variabel tergantung dan 1 (satu) variabel independen atau bebas.</p>
 </blockquote>
-<p><img alt="sederhana" src="D:\SEMESTER 3\PENAMBANGAN DATA\TUGAS - TUGAS PENAMBANGAN DATA\docs\sederhana.png" /></p>
+<p><img alt="img" src="http://fatchurrochman.files.wordpress.com/2012/05/050510_0237_regresiline12.png?w=500" /></p>
 <p>Persamaan di atas adalah rumus dari persamaan regresi linear sederhana. <em>Y</em> adalah variabel tak bebas, <em>a</em> adalah koefisien intersep, <em>b</em> adalah kemiringan dan <em>t</em> adalah variabel bebas. Rumus untuk <em>b</em> adalah :</p>
-<p><img alt="sederhana 2" src="D:\SEMESTER 3\PENAMBANGAN DATA\TUGAS - TUGAS PENAMBANGAN DATA\docs\sederhana 2.png" /></p>
+<p><img alt="img" src="http://fatchurrochman.files.wordpress.com/2012/05/050510_0237_regresiline22.png?w=500" /></p>
 <p>Dan rumus untuk mendapatkan nilai <em>a</em> adalah sebagai berikut :</p>
-<p><img alt="sederhana3" src="D:\SEMESTER 3\PENAMBANGAN DATA\TUGAS - TUGAS PENAMBANGAN DATA\docs\sederhana3.png" /></p>
+<p><img alt="img" src="http://fatchurrochman.files.wordpress.com/2012/05/050510_0237_regresiline32.png?w=500" /></p>
 <p>Dalam regresi linear sederhana juga ada yang disebut dengan koefisien korelasi yang menunjukkan bahwa nilai suatu variabel bergantung pada perubahan nilai variabel yang lain. Rumus untuk menghitung koefisien korelasi adalah sebagai berikut :</p>
-<p><img alt="sederhana4" src="D:\SEMESTER 3\PENAMBANGAN DATA\TUGAS - TUGAS PENAMBANGAN DATA\docs\sederhana4.png" /></p>
+<p><img alt="img" src="http://fatchurrochman.files.wordpress.com/2012/05/050510_0237_regresiline41.png?w=500" /></p>
 <h3 id="regresi-linier-berganda">Regresi Linier Berganda</h3>
 <blockquote>
 <p>Regresi linier berganda adalah hubungan secara linear antara dua atau lebih variabel independen (X1, X2,….Xn) dengan variabel dependen (Y). Analisis ini untuk mengetahui arah hubungan antara variabel independen dengan variabel dependen apakah masing-masing variabel independen berhubungan positif atau negatif dan untuk memprediksi nilai dari variabel dependen apabila nilai variabel independen mengalami kenaikan atau penurunan. Data yang digunakan biasanya berskala interval atau rasio.</p>
@@ -792,6 +792,91 @@ II. Jika Cacat Produksi (Variabel Y) yang ditargetkan hanya boleh 4 unit, maka b
 </ul>
 <p><img alt="variabel-polinomial" src="D:\SEMESTER 3\PENAMBANGAN DATA\TUGAS - TUGAS PENAMBANGAN DATA\docs\variabel-polinomial.jpg" /></p>
 <p>Setelah melihat tabelnya, bisa dilihat bahwa kita memiliki 1 variabel dependen, dan 1 variabel independen. Dari sini kita bisa tahu bahwa kita bisa menggunakan pendekatan model regresi sederhana. Walau demikian, datanya sudah diatur sedemikian rupa sehingga fungsi yang dimiliki antara variabel dependen dengan independen adalah kuadratik. Kita tetap akan mencoba membuat 2 model (simple dan polinomial) untuk membandingkan performanya (seberapa <em>fit</em> antara 2 model regresi ini dengan data).</p>
+<p><code># Mengimpor library
+  import`` numpy as np
+  import`` matplotlib.pyplot as plt
+  import`` pandas as pd</code></p>
+<ul>
+<li>Line 2 sampai line 4 mengimpor library yang diperlukan</li>
+</ul>
+<p><code># Mengimpor dataset
+  dataset ``=`` pd.read_csv(``'Posisi_gaji.csv'``)
+  X ``=`` dataset.iloc[:, ``1``:``2``].values
+  y ``=`` dataset.iloc[:, ``2``].values</code></p>
+<ul>
+<li>Line 7 mengimpor datasetnya</li>
+<li>Line 8 menentukan variabel independen X. Penting, bahwa usahakan variabel independen adalah <em>matrix,</em> dan bukan <em>vector.</em> Kita bisa saja menuliskan <strong>X = dataset.iloc[:, 1].values</strong>, namun perintah ini akan menghasilkan <em>vector.</em> Biasakan membuatnya sebagai sebuah matrix, dengan cara melakukan <em>slicing</em> <strong>X = dataset.iloc[:, 1:2].values</strong>. Bagaimana kita tahu X sudah menjadi <em>matrix?</em> Bisa dilihat kolom <em>size</em> di <em>spyder</em>  variabel X adalah (10,1). Artinya X adalah <em>matrix</em> 10×1 (10 baris dan 1 kolom).</li>
+<li>Line 9 menentukan variabel dependen y. Penting, usahakan variabel dependen adalah <em>vector.</em> Vektor (<em>vector</em>) adalah matriks yang hanya terdiri dari 1 kolom, atau matriks 1 baris. Cara membuatnya menjadi vektor adalah jangan lakukan <em>slicing</em> pada bagian kolomnya. Pada bagian <em>size</em> variabel y di <em>spyder</em> adalah (10,) yang artinya ia adalah matrix 1 baris.</li>
+</ul>
+<p><code># Fitting Linear Regression ke dataset
+  from`` sklearn.linear_model ``import`` LinearRegression
+  lin_reg ``=`` LinearRegression()
+  lin_reg.fit(X, y)</code></p>
+<ul>
+<li>Line 12 mengimpor <em>class</em> LinearRegression (untuk membuat model regresi sederhana)</li>
+<li>Line 13 mempersiapkan objek lin_reg sebagai model regresi sederhana</li>
+<li>Line 14 membuat model regresi sederhana (Kali ini tanpa membagi dataset ke dalam test dan train set, karena datasetnya terlalu kecil (biasanya train set minimal butuh 10 baris, dan kali ini tidak cukup data untuk dimasukkan ke test set). Walau demikian, model yang jadi nanti akan merupakan bagian dari train set, dan dataset baru yang diterima (pengujian train set) akan menjadi test set-nya).</li>
+</ul>
+<p><code># Fitting Polynomial Regression ke dataset
+  from`` sklearn.preprocessing ``import`` PolynomialFeatures
+  poly_reg ``=`` PolynomialFeatures(degree ``=`` ``2``)  ``## nantinya degree diganti menjadi 4
+  X_poly ``=`` poly_reg.fit_transform(X)
+  lin_reg_2 ``=`` LinearRegression()
+  lin_reg_2.fit(X_poly, y)</code></p>
+<ul>
+<li>Line 17 mengimpor PolynomialFeatures dari library sklearn.preprocessing untuk membuat model polinomial. Untuk mengetahui parameter apa saja yang diperlukan, cukup arahkan kursor pada PolynomialFeatures, lalu klik CTRL+i.</li>
+<li>Line 18 mempersiapkan objek poly_reg sebagai transformasi matriks X menjadi matriks X pangkat 2, pangkat 3 hingga pangkat n. Jadi nantinya kita memiliki beberapa tambahan variabel independen sebanyak n. Parameter <em>default</em> untuk PolynomialFeatures adalah degrees=2.</li>
+<li>Line 19 menyiapkan objek X_poly sebagai hasil fit_transform (proses fit dan transform dilakukan sekaligus) dari variabel X. Mari kita bandingkan antara X dengan X_poly.</li>
+<li>Line 20 menyiapkan objek lin_reg_2 sebagai model regresi polinomial.</li>
+<li>Line 21 membuat model regresi polinomial dengan parameter variabel independen adalah X_poly, dan variabel dependennya adalah y.</li>
+</ul>
+<p><code># Visualisasi hasil regresi sederhana
+  plt.scatter(X, y, color ``=`` ``'red'``)
+  plt.plot(X, lin_reg.predict(X), color ``=`` ``'blue'``)
+  plt.title(``'Sesuai atau tidak (Linear Regression)'``)
+  plt.xlabel(``'Level posisi'``)
+  plt.ylabel(``'Gaji'``)
+  plt.show()</code></p>
+<ul>
+<li>
+<p>Line 24 sampai line 29 adalah perintah untuk visualisasi hasil model regresi sederhana kita. Ingat untuk visualisasi, perintah dari line 24-29 harus dieksekusi bersamaan. Visualisasinya akan nampak sebagai berikut :</p>
+<p><img alt="Hasil regresi linear untuk masalah regresi polinomial (tidak fit)" src="https://i1.wp.com/www.megabagus.id/wp-content/uploads/Machine_Learning/regression/poli1.png" /></p>
+</li>
+</ul>
+<p><code># Visualisasi hasil regresi polynomial
+  plt.scatter(X, y, color ``=`` ``'red'``)
+  plt.plot(X, lin_reg_2.predict(X_poly), color ``=`` ``'blue'``)
+  plt.title(``'Sesuai atau tidak (Polynomial Regression)'``)
+  plt.xlabel(``'Level posisi'``)
+  plt.ylabel(``'Gaji'``)
+  plt.show()</code></p>
+<ul>
+<li>
+<p>Line 32 sampai line 37 adalah perintah untuk visualisasi hasil model regresi polinomial. Pelru diingat sumbu y nya adalah <strong>lin_reg_2.predict(X_poly)</strong>.  Hasilnya akan tampak sebagai berikut :</p>
+<p><img alt="Visualisasi regresi polinomial dengan orde=2" src="https://i1.wp.com/www.megabagus.id/wp-content/uploads/Machine_Learning/regression/poli2b.png" /></p>
+<p>Bisa dilihat dengan menggunakan fungsi polinomial hasilnya cukup baik. Namun tetap saja masih kurang cukup <em>fit</em>, di mana masih ada jarak antara model dengan data. Solusinya adalah pada line 18 kita ubah <em>degree</em> nya dari 2 menjadi 4. Eksekusi line 18 sampai line 21. Kemudian eksekusi line 32 sampai line 37. Maka visualisasi yang baru akan tampak sebagai berikut :</p>
+<p><img alt="Visualisasi regresi polinomial dengan orde=4" src="https://i1.wp.com/www.megabagus.id/wp-content/uploads/Machine_Learning/regression/poli3.png" /></p>
+</li>
+</ul>
+<p><code># Memprediksi hasil dengan regresi sederhana
+  lin_reg.predict(``6.5``)</code></p>
+<ul>
+<li>Line 40 adalah perintah untuk melihat dengan model regresi sederhana yang sudah dibuat, berapa gaji yang layak untuk tingkat level 6.5? Maka cukup ganti parameter X di <strong>lin_reg.predict(X)</strong> dengan angka 6.5. Jika dieksekusi, hasilnya adalah 330378.78 dollar/tahun. Tentunya prediksi dari regresi sederhana terlalu tinggi (terlihat juga di plot visualisasinya). Kita tidak menginginkan gaji yang terlalu tinggi yang merupakan hasil dari model regresi sederhana yang buruk kali ini.</li>
+</ul>
+<p><code># Memprediksi hasil dengan regresi polynomial
+  lin_reg_2.predict(poly_reg.fit_transform(``6.5``))</code></p>
+<ul>
+<li>Line 43 adalah perintah untuk melihat prediksi gaji dengan model regresi polinomial. Perlu diperhatikan bahwa parameter X diganti dengan <strong>poly_reg.fit_transform(6.5)</strong> dan bukan X_poly. Karena kita ingin mengisi angka 6.5 sebagai parameter X. Sementara X_poky adalah hasil dari definisi fungsi poly_reg.fit_transform(X). Ketika dieksekusi maka hasilnya adalah 158862.45 dollar/tahun. Prediksi yang cukup baik, dengan model yang <em>fit.</em></li>
+</ul>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$$','$$']]}
+});
+</script>
+
+<p><script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script></p>
                 
                   
                 
